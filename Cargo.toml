@@ -1,0 +1,21 @@
+[package]
+name = "chatgpt-private-test"
+version = "0.1.0"
+edition = "2021"
+description = "a helper function to use chatgpt"
+authors = ["jaykchen@gmail.com"]
+license = "MIT"
+
+
+[[example]]
+name = "simple"
+path = "src/example/simple.rs"
+
+
+[dependencies]
+anyhow = "1.0.71"
+dotenv = "0.15.0"
+http_req = "0.9.1"
+serde = { version = "1.0.163", features = ["derive"] }
+serde_json = { version = "1.0.96" }
+tokio_wasi = { version = "1.25.1", features = ["full"] }
