@@ -4,8 +4,6 @@ use serde::Deserialize;
 use serde_json::Value;
 use std::env;
 
-#[no_mangle]
-#[tokio::main(flavor = "current_thread")]
 pub async fn custom_gpt(sys_prompt: &str, u_prompt: &str, m_token: u16) -> Option<String> {
     let system_prompt = serde_json::json!(
         {"role": "system", "content": sys_prompt}
