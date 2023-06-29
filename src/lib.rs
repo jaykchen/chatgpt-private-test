@@ -1,3 +1,5 @@
+pub mod utils;
+
 use dotenv::dotenv;
 use http_req::{request::Method, request::Request, uri::Uri};
 use serde::Deserialize;
