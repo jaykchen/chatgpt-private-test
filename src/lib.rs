@@ -25,7 +25,7 @@ pub async fn chat(message_obj: Vec<Value>, m_token: u16) -> Result<(String, u32)
     let api_token = env::var("OPENAI_API_TOKEN")?;
 
     let params = serde_json::json!({
-      "model": "gpt-3.5-turbo",
+      "model": "gpt-3.5-turbo-16k",
       "messages": message_obj,
       "temperature": 0.7,
       "top_p": 1,

@@ -58,7 +58,8 @@ pub async fn search_with_openai(
 pub async fn load_text() -> anyhow::Result<()> {
     let bpe = cl100k_base().unwrap();
 
-    let s = include_str!("book.txt");
+    // let s = include_str!("book.txt");
+    let s = "book.txt";
 
     let chunked_text = bpe
         .encode_ordinary(&convert(s))
